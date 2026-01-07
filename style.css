@@ -1,0 +1,217 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: radial-gradient(circle at top, #1c2541, #0b132b);
+    color: #eaeaea;
+    line-height: 1.7;
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(90deg, #3a86ff, #4361ee);
+    padding: 35px 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.45);
+}
+
+header h1 {
+    font-size: 38px;
+    letter-spacing: 2px;
+    color: #ffffff;
+    text-shadow: 0 0 12px rgba(58,134,255,0.6);
+}
+
+header p {
+    margin-top: 10px;
+    font-style: italic;
+    color: #edf2fb;
+}
+
+/* NAVBAR */
+nav {
+    background: rgba(11,19,43,0.8);
+    backdrop-filter: blur(8px);
+    padding: 14px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav a {
+    color: #90dbf4;
+    margin: 0 18px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    position: relative;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #ffd166;
+    left: 0;
+    bottom: -6px;
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* CONTAINER */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 35px 25px;
+}
+
+/* CARD */
+.card {
+    background: linear-gradient(
+        145deg,
+        rgba(255,255,255,0.08),
+        rgba(255,255,255,0.02)
+    );
+    border-radius: 22px;
+    padding: 30px;
+    margin-bottom: 35px;
+    box-shadow:
+        0 18px 45px rgba(0,0,0,0.6),
+        inset 0 0 18px rgba(255,255,255,0.04);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow:
+        0 22px 55px rgba(0,0,0,0.75),
+        0 0 30px rgba(58,134,255,0.25);
+}
+
+/* JUDUL CARD */
+.card h2 {
+    color: #ffd166;
+    margin-bottom: 15px;
+    font-size: 28px;
+    border-left: 5px solid #3a86ff;
+    padding-left: 15px;
+}
+
+/* PARAGRAF */
+.card p {
+    margin-bottom: 15px;
+    color: #eaeaea;
+}
+
+/* TABLE */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    padding: 14px;
+    text-align: left;
+}
+
+table th {
+    background: rgba(58,134,255,0.25);
+    color: #ffffff;
+    width: 35%;
+}
+
+table td {
+    background: rgba(255,255,255,0.05);
+}
+
+/* IMAGE ARMADA */
+.fleet-img {
+    width: 100%;
+    max-height: 360px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin-bottom: 22px;
+    box-shadow: 0 14px 35px rgba(0,0,0,0.6);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.fleet-img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 40px rgba(58,134,255,0.35);
+}
+
+/* FORM */
+label {
+    margin-top: 15px;
+    display: block;
+    font-weight: 600;
+}
+
+input, select {
+    background: rgba(255,255,255,0.1);
+    color: #ffffff;
+}
+
+/* FIX WARNA DROPDOWN SELECT */
+select {
+    background-color: rgba(255,255,255,0.1);
+    color: #ffffff;
+}
+
+select option {
+    background-color: #0b132b; /* dark navy */
+    color: #ffffff;
+}
+
+
+button {
+    margin-top: 20px;
+    background: linear-gradient(90deg, #3a86ff, #4361ee);
+    color: #0b132b;
+    font-weight: bold;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+button:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+/* FOOTER */
+footer {
+    background: rgba(11,19,43,0.9);
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    color: #adb5bd;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 28px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 10px;
+    }
+
+    .card h2 {
+        font-size: 22px;
+    }
+}
